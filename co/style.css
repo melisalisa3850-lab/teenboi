@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #133da8;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #8bfbff;
+}
+
+.container {
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.glow {
+    font-size: 40px;
+    color: #00f7ff;
+    text-shadow: 
+        0 0 5px #0048ff,
+        0 0 10px #00f7ff,
+        0 0 20px #08888d;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.name {
+    font-size: 32px;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.box {
+    border: 1px solid #00f7ff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #18d0fe;
+}
+
+.footer {
+    margin-top: 30px;
+    font-style: italic;
+    color: #ffffff;
+}
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(227, 255, 255, 0.05) 0px,
+        rgba(124, 230, 230, 0.05) 2px,
+        transparent 2px,
+        transparent 50px
+    );
+    pointer-events: none;
+}
+/* ✨ font lebih playful */
+body {
+    font-family: "Trebuchet MS", cursive;
+}
+
+/* 💖 judul jadi lebih pop */
+.name {
+    color: #ffffff;
+    text-shadow: 
+        0 0 5px #000000,
+        0 0 10px #7796fa,
+        0 0 20px #96c7ff;
+}
+
+/* 🎸 efek hover biar "hidup" */
+.name:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* ⚡ box jadi lebih aesthetic */
+.box {
+    border: 1px solid #ffc3de;
+    box-shadow: 
+        0 0 10px #ffc2de,
+        0 0 20px #00f7ff;
+}
+
+/* ✨ sparkle kecil */
+.container::after {
+    content: "✨ ⚡ 🎸 💖";
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+/* 🎶 animasi kedip neon */
+@keyframes glowBlink {
+    0% { opacity: 10; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+.glow {
+    animation: glowBlink 2s infinite;
+}
+
+/* 💫 background glow tambahan */
+body {
+    background: radial-gradient(circle at top, #5c4dff, #000000);
+}
